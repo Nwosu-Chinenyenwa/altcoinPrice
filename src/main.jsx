@@ -1,17 +1,17 @@
+// src/main.jsx
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
-import  CoinContextProvider  from "./context/CoinContext";
+import App from "./App.jsx";
+import CoinContextProvider from "./context/CoinContext.jsx";
+import "./index.css";
 
-createRoot(document.getElementById("root"))
-.render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-    <CoinContextProvider>
-    <App />
-    </CoinContextProvider>
+      <CoinContextProvider> {/* ✅ Wrap App with Provider */}
+        <App />
+      </CoinContextProvider>
     </BrowserRouter>
   </StrictMode>
-)
+);

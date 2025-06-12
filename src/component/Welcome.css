@@ -1,0 +1,115 @@
+
+.section {
+  min-height: 100vh;
+          background-image: url(/src/assets/area_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.img{
+   padding: 20px; 
+   padding-left: 100px;
+    padding-right: 100px;
+}
+
+.log{
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+    background-color: transparent;
+    padding-left: 100px;
+}
+
+.bounce{
+   animation: bounce 3s infinite;
+}
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-50px);
+      }
+    }
+
+.main1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 90px;
+    gap: 50px;
+    padding-right: 90px;
+
+}
+
+.main2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    width: 50vw;
+}
+
+
+.main2 h1{
+    font-weight: 900;
+}
+
+.main2 p{
+      width: 40vw;
+}
+
+ .button{
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      width: 40vw;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(135deg, #6366f1, #3b82f6);
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.6),
+                  0 8px 20px rgba(59, 130, 246, 0.3);
+      cursor:not-allowed;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+}
+
+.button::before{
+          content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent 60%);
+      transform: rotate(45deg);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+}
+
+   .button:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 0 25px rgba(99, 102, 241, 0.8),
+                  0 12px 24px rgba(59, 130, 246, 0.4);
+    }
+
+    button:hover::before {
+      opacity: 1;
+    }
+
+    .button:active {
+      transform: translateY(1px) scale(0.98);
+      box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+    }
+    
+
+
+    @media (max-width:769px){
+      .main2{
+        display: grid;
+      }
+    }

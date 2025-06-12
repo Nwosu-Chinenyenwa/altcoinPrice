@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 
+// Create the context
 export const CoinContext = createContext();
 
 const CoinContextProvider = ({ children }) => {
@@ -18,15 +19,9 @@ const CoinContextProvider = ({ children }) => {
       },
     };
 
-    
-    const response = await fetch(
-      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}&sparkline=true`,
-      options
-    );
-
     try {
       const response = await fetch(
-        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`,
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}&sparkline=true`,
         options
       );
       const data = await response.json();
