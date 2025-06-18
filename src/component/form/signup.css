@@ -2,12 +2,13 @@
     position: absolute;
   padding: 50px 20px;
   right: 0;
-  top: 225px;
+  top: 170px;
   z-index: 2;
   backdrop-filter: blur(8px);
   color: black;
   -webkit-backdrop-filter: blur(8px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  height: 65vh;
 }
 
 .login-card {
@@ -109,11 +110,10 @@
   border: 2px solid #f3f3f3;
   border-top: 2px solid #3498db;
   border-radius: 50%;
-  animation: spin 50s linear infinite;
+  animation: spin 10s linear infinite;
   display: inline-block;
   vertical-align: middle;
 }
-
 
 
 @keyframes spin {

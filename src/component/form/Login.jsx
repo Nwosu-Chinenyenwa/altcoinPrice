@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import { auth } from "../../firebase/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function Login() {
   // Local storage states
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [name, setname] = useState("");
+  const [loading, setloading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,17 +35,17 @@ function Login() {
     localStorage.setItem("userpassword", password);
   }, [password]);
 
-/*   firebase */
- const handleLogin = async (e) => {
+  /*   firebase */
+  const handleLogin = async (e) => {
     e.preventDefault();
+    setloading(true);
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/homeload');
+      navigate("/home");
     } catch (error) {
       alert(error.message);
     }
   };
-
 
   return (
     <div className="login-wrapper">
@@ -68,10 +71,13 @@ function Login() {
           onChange={(e) => setpassword(e.target.value)}
         />
 
-        <button type="submit">
-          Login
+        <button type="submit" disabled={loading}>
+          {loading ? <span className="spinner"></span> : "Login"}
         </button>
       </form>
+      <p className="p">I don't have an account? Sign up</p>
+
+      <Outlet />
     </div>
   );
 }

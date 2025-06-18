@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link, Outlet } from "react-router-dom";
-import { auth } from '../../firebase/firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from "../../firebase/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import "./signup.css";
 
 function SignUp() {
-    const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -27,27 +27,31 @@ function SignUp() {
     localStorage.setItem("username", name);
   }, [email, password, name]);
 
-/*   firebase */
- const handleSignUp = async (e) => {
+  /*   firebase */
+  const handleSignUp = async (e) => {
     e.preventDefault();
-        e.preventDefault();
+    e.preventDefault();
     setLoading(true);
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log('User signed up!');
+      console.log("User signed up!");
     } catch (err) {
-      console.error('Signup error:', err);
+      console.error("Signup error:", err);
     } finally {
       setLoading(false);
     }
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate('/home');
+      navigate("/home");
     } catch (error) {
       alert(error.message);
     }
+
+    await updateProfile(auth.currentUser, {
+      displayName: name,
+    });
   };
 
   return (
@@ -85,15 +89,12 @@ function SignUp() {
           />
 
           <button type="submit" disabled={loading}>
-        {loading ? (
-          <span className="spinner"></span>
-        ) : (
-          'Sign Up'
-        )}
-      </button>
-            <p className="p">Already have an account? Log in</p>
+            {loading ? <span className="spinner"></span> : "Sign Up"}
+          </button>
+          <p className="p">Already have an account? Log in</p>
         </form>
       </div>
+      <Outlet />
     </>
   );
 }

@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../../assets/logo (1).png";
 import { signOut } from "firebase/auth";
 import { useContext } from "react";
 import { CoinContext } from "../../../context/CoinContext";
+import { auth } from "../../../firebase/firebase";
 
 function Navbar() {
   const { setCurrency } = useContext(CoinContext);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const currentUser = auth.currentUser;
+    if (currentUser) {
+      setUser(currentUser);
+    }
+  }, []);
 
 
   const currencyHandler = async (e) => {
@@ -53,15 +62,10 @@ function Navbar() {
 
   return (
     <>
-      <header>
-        <nav>
           <a href="https://www.coingecko.com/">Join coin gecko today to see more dayly price changes</a>
-        </nav>
-        <div className="logo">
           <img  src={logo} alt="" />
-
-          <div className="">
             <select
+            className="custom-select"
               id="currency"
               onChange={currencyHandler}
               value={currencyHandler.name}
@@ -77,11 +81,10 @@ function Navbar() {
               <option value="zar">ZAR (R)</option>
               <option value="ngn">NGN (₦)</option>
             </select>
-             <button className="nav-button" onClick={handleLogout}>Log Out</button>
-          </div>
-        </div>
+<button onClick={handleLogout} class="btn-17">
+Logout
+</button>
 
-      </header>
     </>
   );
 }

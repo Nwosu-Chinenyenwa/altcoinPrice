@@ -9,7 +9,7 @@ import "./index.css";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <CoinContextProvider> {/* ✅ Wrap App with Provider */}
+      <CoinContextProvider>
         <App />
       </CoinContextProvider>
     </BrowserRouter>

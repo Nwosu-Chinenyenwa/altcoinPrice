@@ -3,6 +3,7 @@ import "./Welcome.css";
 import logo from "./../assets/logo (1).png";
 import side from "./../assets/banner-img.svg";
 import Signup from "./form/signup";
+import Signin from "./form/Login";
 
 function Welcome() {
   return (
@@ -18,7 +19,7 @@ function Welcome() {
 
             <button className="button">Get Started</button>
         </div>
-        <Signup/>
+        <Signin/>
         <div className="grid">
           <img className="bounce" src={side} alt="Crypto illustration" />
         </div>
