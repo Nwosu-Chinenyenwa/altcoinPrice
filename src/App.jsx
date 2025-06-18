@@ -5,7 +5,8 @@ import SignUp from "./component/form/signup.jsx";
 import Welcome from "./component/Welcome.jsx";
 import Loader from "./Loader/Loader.jsx";
 import Home from "./pages/Home/Home.jsx";
-import Seo from "./component/SEO/Seo.jsx";
+import RedirectToLastPage from "./component/currentPage/RedirectToLastPage.jsx";
+import SaveLastPage from "./component/currentPage/SaveLastPage.jsx";
 function App() {
   const ref = useRef(null);
   useEffect(() => {
@@ -24,7 +25,8 @@ function App() {
   return (
     <>
       <div className="cursor" ref={ref}></div>
-      <Seo />
+      <SaveLastPage />
+      <RedirectToLastPage />
       <Routes>
         <Route path="/" element={<Loader />} />
         <Route path="/welcome" element={<Welcome />} />
