@@ -74,9 +74,8 @@ function Login() {
         <button type="submit" disabled={loading}>
           {loading ? <span className="spinner"></span> : "Login"}
         </button>
-      </form>
-      <p className="p">I don't have an account? Sign up</p>
 
+      </form>
       <Outlet />
     </div>
   );

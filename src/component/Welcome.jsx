@@ -14,12 +14,13 @@ function Welcome() {
         <div className="main2">
           <h1> PLATFORM FOR CHECKING CRYPTO CURRENCY PRICES</h1>
           <p>
-            Welcome to your trusted crypto companion. Monitor real-time prices, analyze charts, and make informed decisions — all in one place.
+            Welcome to your trusted crypto companion. Monitor real-time prices,
+            analyze charts, and make informed decisions — all in one place.
           </p>
 
-            <button className="button">Get Started</button>
+          <button className="button">Get Started</button>
         </div>
-        <Signin/>
+        <Signup />
         <div className="grid">
           <img className="bounce" src={side} alt="Crypto illustration" />
         </div>

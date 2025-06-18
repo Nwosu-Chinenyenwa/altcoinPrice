@@ -84,7 +84,7 @@ function Navbar() {
 <button onClick={handleLogout} class="btn-17">
 Logout
 </button>
-
+ <p className="p">Already have an account? Log in</p>
     </>
   );
 }

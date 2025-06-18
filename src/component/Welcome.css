@@ -105,6 +105,11 @@
       transform: translateY(1px) scale(0.98);
       box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
     }
+
+    .para{
+      font-size: 13px;
+      padding: 5px;
+    }
     
 
 

@@ -34,19 +34,6 @@ export default function Loader() {
       <div className="loader">
         <span></span>
       </div>
-      
-      <div className="card">
-        <div className="loader">
-          <p>loading</p>
-          <div className="words">
-            <span className="word">images</span>
-            <span className="word">coin</span>
-            <span className="word">form</span>
-            <span className="word">pages</span>
-            <span className="word">buttons</span>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

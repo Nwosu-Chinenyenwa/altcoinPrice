@@ -2,7 +2,7 @@
     position: absolute;
   padding: 50px 20px;
   right: 0;
-  top: 170px;
+  top: 100px;
   z-index: 2;
   backdrop-filter: blur(8px);
   color: black;
