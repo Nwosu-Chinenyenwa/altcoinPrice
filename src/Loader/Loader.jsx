@@ -14,7 +14,7 @@ export default function Loader() {
       const timer = setTimeout(() => {
         sessionStorage.setItem('hasSeenLoader', 'true');
         navigate('/welcome');
-      }, 5000);
+      }, 2000);
 
       return () => clearTimeout(timer);
     }

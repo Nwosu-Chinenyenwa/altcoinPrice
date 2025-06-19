@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Welcome.css";
 import logo from "./../assets/logo (1).png";
 import side from "./../assets/banner-img.svg";
@@ -6,6 +6,8 @@ import Signup from "./form/signup";
 import Signin from "./form/Login";
 
 function Welcome() {
+
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="section">
       <img className="log img" src={logo} alt="Logo" />
@@ -18,9 +20,13 @@ function Welcome() {
             analyze charts, and make informed decisions — all in one place.
           </p>
 
-          <button className="button">Get Started</button>
+          <button className="button"
+          onClick={()=> setIsOpen(!isOpen)}
+          >Get Started</button>
         </div>
-        <Signup />
+        <div className="" style={{ display: isOpen? "block" : "none"}}>
+          <Signup />
+        </div>
         <div className="grid">
           <img className="bounce" src={side} alt="Crypto illustration" />
         </div>
@@ -30,3 +36,7 @@ function Welcome() {
 }
 
 export default Welcome;
+
+
+
+

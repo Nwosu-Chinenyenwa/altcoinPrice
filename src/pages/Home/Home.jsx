@@ -8,14 +8,14 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 import { auth } from "../../firebase/firebase";
 import { signOut } from "firebase/auth";
 import { Link, Outlet } from "react-router-dom";
+import SignUp from "../../component/form/signup";
 
 export default function Home() {
   const [link, setlink] = useState(true);
-  const [use, setuse] = useState(false);
+  const [use, setuse] = useState(true);
   const { allCoins, currency } = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
   const [input, setInput] = useState("");
-  const ref = useRef(null);
   const { setCurrency } = useContext(CoinContext);
   const [user, setUser] = useState(null);
 
@@ -120,7 +120,7 @@ export default function Home() {
         {link && (
           <div className="first">
             <a href="https://www.coingecko.com/">
-              🚀Join coin gecko today to see more dayly price changes🚀
+              🚀Join coin gecko today to see more daily price changes🚀
             </a>
             <svg
               onClick={() => setlink((prev) => !prev)}
@@ -207,8 +207,8 @@ export default function Home() {
             </div>
             <p class="name-client">
               {" "}
-              Jhon Doe
-              <span>{user}</span>
+            <h5>USER:</h5>
+              <span>{user?.email}</span>
             </p>
             <hr />
             <div class="social-media">
@@ -254,7 +254,7 @@ export default function Home() {
             <p>7D Chart</p>
           </div>
 
-          {displayCoin.slice(0, 50).map((item, index) => (
+          {displayCoin.slice(0, 100).map((item, index) => (
             <div className="table-layout coin-row" key={item.id}>
               <p>{index + 1}</p>
               <div className="coin-info">

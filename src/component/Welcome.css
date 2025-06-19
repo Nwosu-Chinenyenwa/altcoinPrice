@@ -72,7 +72,7 @@
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(99, 102, 241, 0.6),
                   0 8px 20px rgba(59, 130, 246, 0.3);
-      cursor:not-allowed;
+      cursor:pointer;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
@@ -114,7 +114,61 @@
 
 
     @media (max-width:769px){
-      .main2{
-        display: grid;
-      }
+  /* .login-wrapper  {
+  display: none;
+} */
+
+
+
+.log {
+    padding-left: 0px;
+}
+
+.main1 {
+    display: flex
+;
+flex-direction: column;
+    padding-left: 0px;
+    gap: 20px;
+    padding-right: 0px;
+    padding-top: 50px;
+}
+
+.main2 {
+    display: flex
+;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    width: 100vw;
+}
+
+.main2 h1 {
+    font-weight: 900;
+    font-size: 28px;
+}
+
+.main2 p {
+    width: 100vw;
+    font-size: 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 60vw;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.grid img{
+  width: 100vw;
+  position: relative;
+  top: 50px;
+}
+
     }
+
+    

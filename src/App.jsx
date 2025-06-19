@@ -8,19 +8,19 @@ import Home from "./pages/Home/Home.jsx";
 import RedirectToLastPage from "./component/currentPage/RedirectToLastPage.jsx";
 import SaveLastPage from "./component/currentPage/SaveLastPage.jsx";
 function App() {
-  const ref = useRef(null);
-  useEffect(() => {
-    const mouse = (e) => {
-      ref.current.style.top = `${e.pageY}px`;
-      ref.current.style.left = `${e.pageX}px`;
-    };
+const ref = useRef(null);
+useEffect(() => {
+  const mouse = (e) =>{
+    ref.current.style.top = e.clientY + "px"
+    ref.current.style.left = e.clientX + "px"
+}
 
-    document.addEventListener("mousemove", mouse);
-
-    return () => {
-      document.addEventListener("mousemove", mouse);
-    };
-  }, []);
+    document.addEventListener("mousemove", mouse)
+    return () =>{
+    document.removeEventListener("mousemove", mouse)
+    }
+  }
+,[])
 
   return (
     <>

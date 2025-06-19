@@ -340,9 +340,9 @@ nav ul{
 
 .profile img{
     width: 2vw;
-    height: 4vh;
+    height: 5vh;
     position: relative;
-    top: 2px;
+    top: 1px;
 }
 
 .profile svg{
@@ -761,6 +761,16 @@ input:-webkit-autofill:active {
   width: 10px;
   height: 4px;
   scale: 10;
+}
+
+.name-client{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.name-client span{
+  word-break: break-all;
 }
 
 
