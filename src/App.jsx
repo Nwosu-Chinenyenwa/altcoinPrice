@@ -1,26 +1,23 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import SignIn from "./component/form/Login.jsx";
-import SignUp from "./component/form/signup.jsx";
-import Welcome from "./component/Welcome.jsx";
+import Form from "./component/form/Form.jsx";
 import Loader from "./Loader/Loader.jsx";
 import Home from "./pages/Home/Home.jsx";
 import RedirectToLastPage from "./component/currentPage/RedirectToLastPage.jsx";
 import SaveLastPage from "./component/currentPage/SaveLastPage.jsx";
 function App() {
-const ref = useRef(null);
-useEffect(() => {
-  const mouse = (e) =>{
-    ref.current.style.top = e.clientY + "px"
-    ref.current.style.left = e.clientX + "px"
-}
+  const ref = useRef(null);
+  useEffect(() => {
+    const mouse = (e) => {
+      ref.current.style.top = e.clientY + "px";
+      ref.current.style.left = e.clientX + "px";
+    };
 
-    document.addEventListener("mousemove", mouse)
-    return () =>{
-    document.removeEventListener("mousemove", mouse)
-    }
-  }
-,[])
+    document.addEventListener("mousemove", mouse);
+    return () => {
+      document.removeEventListener("mousemove", mouse);
+    };
+  }, []);
 
   return (
     <>
@@ -29,11 +26,8 @@ useEffect(() => {
       <RedirectToLastPage />
       <Routes>
         <Route path="/" element={<Loader />} />
-        <Route path="/welcome" element={<Welcome />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signin" element={<SignIn />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
     </>
   );

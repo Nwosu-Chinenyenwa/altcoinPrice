@@ -9,11 +9,11 @@ export default function Loader() {
     const hasSeenLoader = sessionStorage.getItem('hasSeenLoader');
 
     if (hasSeenLoader) {
-      navigate('/welcome');
+      navigate('/form');
     } else {
       const timer = setTimeout(() => {
         sessionStorage.setItem('hasSeenLoader', 'true');
-        navigate('/welcome');
+        navigate('/form');
       }, 2000);
 
       return () => clearTimeout(timer);
