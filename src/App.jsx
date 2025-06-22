@@ -5,6 +5,7 @@ import Loader from "./Loader/Loader.jsx";
 import Home from "./pages/Home/Home.jsx";
 import RedirectToLastPage from "./component/currentPage/RedirectToLastPage.jsx";
 import SaveLastPage from "./component/currentPage/SaveLastPage.jsx";
+import LandingPage from "./LandingPage/LandingPage.jsx";
 function App() {
   const ref = useRef(null);
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
       <RedirectToLastPage />
       <Routes>
         <Route path="/" element={<Loader />} />
+        <Route path="/landingPage" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/form" element={<Form />} />
       </Routes>
