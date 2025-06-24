@@ -169,7 +169,7 @@ function Form() {
                 marginBottom: "10px",
               }}
               ref={recaptchaRef}
-              sitekey="6LfQw2srAAAAAH0C2wa0kki-XJ5xpLRh7HmUsU3E"
+              sitekey="6Lc7xGsrAAAAAP65jPvGcSwIP9FxH8EP5rOfOezK"
               onChange={handleRecaptcha}
             />
 
