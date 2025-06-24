@@ -13,7 +13,7 @@ export default function Loader() {
     } else {
       const timer = setTimeout(() => {
         sessionStorage.setItem("hasSeenLoader", "true");
-        navigate("/form");
+        navigate("/landingPage");
       }, 5000);
 
       return () => clearTimeout(timer);

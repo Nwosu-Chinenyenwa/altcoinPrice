@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Form.css";
 import { useNavigate, Outlet } from "react-router-dom";
 import { auth } from "../firebase/firebase";
+import Cookies from "js-cookie";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -23,9 +24,9 @@ function Form() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const savedEmail = localStorage.getItem("useremail");
-    const savedPassword = localStorage.getItem("userpassword");
-    const savedName = localStorage.getItem("username");
+    const savedEmail = Cookies.get("useremail");
+    const savedPassword = Cookies.get("userpassword");
+    const savedName = Cookies.get("username");
 
     if (savedEmail) setEmail(savedEmail);
     if (savedPassword) setPassword(savedPassword);
@@ -33,9 +34,9 @@ function Form() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("useremail", email);
-    localStorage.setItem("userpassword", password);
-    localStorage.setItem("username", name);
+    Cookies.set("useremail", email);
+    Cookies.set("userpassword", password);
+    Cookies.set("username", name);
   }, [email, password, name]);
 
   const handleSignUp = async (e) => {
