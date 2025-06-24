@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Form.css";
 import { useNavigate, Outlet } from "react-router-dom";
-import { auth } from "../../firebase/firebase";
+import { auth } from "../firebase/firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -13,7 +13,7 @@ import useRecaptcha from "../form/reCAPTCHA";
 import axios from "axios";
 
 function Form() {
-  const { capchaToken, recaptchaRef, handleRecaptcha } = useRecaptcha(); 
+  const { capchaToken, recaptchaRef, handleRecaptcha } = useRecaptcha();
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -90,7 +90,7 @@ function Form() {
   };
 
   /*   recaptcha */
-  const submit = async (e) =>{
+  const submit = async (e) => {
     e.preventDefault();
     if (capchaToken && username && password) {
       const result = await axios.post(`https://your-login-endpoint`, {
@@ -99,8 +99,8 @@ function Form() {
         capchaToken,
       });
       if (result.data.recaptchaValid === false) {
-        alert('ReCAPTCHA validation failed. Please try again.');
-        handleRecaptcha('');
+        alert("ReCAPTCHA validation failed. Please try again.");
+        handleRecaptcha("");
         if (recaptchaRef.current) {
           recaptchaRef.current.reset();
         }
@@ -109,13 +109,13 @@ function Form() {
 
       recaptchaRef.current?.reset();
       if (result.data.success) {
-        console.log('Login successful');
+        console.log("Login successful");
         // ...
       } else {
-        alert('Login failed. Please check your credentials and try again.');
+        alert("Login failed. Please check your credentials and try again.");
       }
     } else {
-      alert('Please fill in all fields and complete the captcha.');
+      alert("Please fill in all fields and complete the captcha.");
     }
   };
 
@@ -162,12 +162,22 @@ function Form() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <ReCAPTCHA style={{position:"relative",left:"10px", marginBottom:"10px"}}
-            ref={recaptchaRef}
-            sitekey="6LcdKWkrAAAAADj2tBOwdGrW5PlKvCYlOoVlWEHa"
-            onChange={handleRecaptcha}/>
+            <ReCAPTCHA
+              style={{
+                position: "relative",
+                left: "10px",
+                marginBottom: "10px",
+              }}
+              ref={recaptchaRef}
+              sitekey="6LcdKWkrAAAAADj2tBOwdGrW5PlKvCYlOoVlWEHa"
+              onChange={handleRecaptcha}
+            />
 
-            <button type="submit" disabled={loading && !capchaToken} onClick={submit}>
+            <button
+              type="submit"
+              disabled={loading && !capchaToken}
+              onClick={submit}
+            >
               {loading ? <span className="spinner"></span> : "Sign Up"}
             </button>
 

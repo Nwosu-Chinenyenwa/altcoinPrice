@@ -47,11 +47,11 @@ export default function CookieConsent() {
             <div className="card-body">
               <p>
                 We use cookies to enhance your experience on our website. By
-                continuing to use our site, you agree to our use of cookies.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                suscipit repudiandae, quaerat, delectus laborum, accusamus fuga
-                corrupti quod cum consectetur voluptatem expedita quos doloribus
-                eum voluptatum temporibus officiis omnis cupiditate.
+                continuing to browse, you agree to our use of cookies. These
+                cookies help us remember your preferences, improve site
+                performance, analyze traffic, and secure user authentication.
+                Your privacy is important to us, and we only collect essential
+                data to deliver a better and safer experience.
               </p>
               <div>
                 <button className="accept-button" onClick={handleAcceptCookies}>

@@ -76,3 +76,35 @@
     font-size: 12px;
     border:  1px solid #3861fb;
 }
+
+@media (max-width: 769px) {
+    .card h2{
+        font-size: 15px;
+    }
+.card p{
+    font-size: 10px;
+}
+.card svg{
+    width: 3.5vw;
+}
+
+.accept-button{
+    width: 30vw;
+    border-radius: 100px;
+     background-color: #008000c6;
+    border: none;
+}
+
+.accept-button:hover{
+     background-color: #008000bb;
+}
+
+
+
+.reject-button, .reject-button:hover{
+      width: 30vw;
+    border-radius: 100px;
+    background-color: red;
+    border: none;
+}
+}

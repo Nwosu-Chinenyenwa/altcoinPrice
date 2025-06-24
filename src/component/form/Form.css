@@ -116,3 +116,27 @@ button:hover {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+@media (max-width:769px){
+  .login-container{
+    width: 95%;
+  }
+
+  .heading
+ {
+    font-size: 30px;
+}
+
+.paragraph {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+button {
+    font-size: 15px;
+}
+
+.bottom-text {
+    font-size: 12px;
+}
+}

@@ -1,0 +1,57 @@
+.header{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 25vh;
+}
+
+.link{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.link img{
+    height: 3vh;
+    filter: brightness(0) invert(1);
+}
+
+.link{
+    background-color: rgba(0, 0, 0, 0.315);
+padding: 5px;
+width: 70vw;
+padding-inline: 20px;
+border: 1px solid #3861fb;
+border-radius: 200px;
+}
+
+.link ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    color: white;
+}
+
+.link ul li{
+   cursor: pointer;
+   font-size: 13px;
+   text-transform: uppercase;
+}
+
+.link .Btn{
+    background-color: transparent;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.link .sign svg{
+    filter: invert(0) brightness(1);
+}
+
+

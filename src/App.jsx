@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Form from "./component/form/Form.jsx";
-import Loader from "./Loader/Loader.jsx";
-import Home from "./pages/Home/Home.jsx";
+import Loader from "./component/Loader/Loader.jsx";
+import Home from "./component/Home/Home.jsx";
 import RedirectToLastPage from "./component/currentPage/RedirectToLastPage.jsx";
 import SaveLastPage from "./component/currentPage/SaveLastPage.jsx";
-import LandingPage from "./LandingPage/LandingPage.jsx";
+import LandingPage from "./component/LandingPage/LandingPage.jsx";
 function App() {
   const ref = useRef(null);
   useEffect(() => {
