@@ -20,7 +20,6 @@ function Form() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [showLogin, setShowLogin] = useState(false);
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -47,7 +46,7 @@ function Form() {
       await new Promise((resolve) => setTimeout(resolve, 2000));
       await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(auth.currentUser, { displayName: name });
-      navigate("/landingPage");
+      navigate("/home");
     } catch (error) {
       const erroralert = handleError(error.code);
       alert(erroralert);
@@ -61,7 +60,7 @@ function Form() {
     setLoading(true);
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/landingPage");
+      navigate("/home");
     } catch (error) {
       const viewError = handleError(error.code);
       alert(viewError);

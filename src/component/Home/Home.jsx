@@ -8,6 +8,7 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 import { auth } from "../firebase/firebase";
 import { signOut } from "firebase/auth";
 import { Link, Outlet } from "react-router-dom";
+import Cookies from "js-cookie";
 
 export default function Home() {
   const [link, setlink] = useState(true);
@@ -24,7 +25,7 @@ export default function Home() {
 
   /*   logout */
   const handleLogout = async () => {
-    await signOut(auth);
+    await auth.signOut(auth);
     navigate("/form");
   };
 
@@ -33,6 +34,17 @@ export default function Home() {
     const currentUser = auth.currentUser;
     if (currentUser) {
       setUser(currentUser);
+    }
+    const acceptedCookies = Cookies.get("acceptedCookies");
+    if (acceptedCookies) {
+      Cookies.set("userEmail", currentUser.email);
+    }
+
+    if (acceptedCookies) {
+      const emailFromCookie = Cookies.get("acceptedCookies");
+      if (emailFromCookie) {
+        setUser({ email: emailFromCookie });
+      }
     }
   }, []);
 
@@ -174,7 +186,7 @@ export default function Home() {
               </label>
             </form>
 
-            <button class="button">
+            <button class="button" onClick={handleLogout}>
               <div class="button-box">
                 <span class="button-elem">
                   <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">

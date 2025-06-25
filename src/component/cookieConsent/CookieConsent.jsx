@@ -20,11 +20,11 @@ export default function CookieConsent() {
   }, [location]);
 
   const handleAcceptCookies = () => {
-    Cookies.set("DisplayCookies", "true", { expires: 365 });
+    Cookies.set("DisplayCookies", "true", { expires: 3000 });
     setDisplayCookies(false);
   };
   const handleRejectCookies = () => {
-    Cookies.set("DisplayCookies", "false", { expires: 365 });
+    Cookies.set("DisplayCookies", "false", { expires: 3000 });
     setDisplayCookies(false);
   };
   return (

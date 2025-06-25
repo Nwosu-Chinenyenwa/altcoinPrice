@@ -9,7 +9,7 @@ export default function Loader() {
     const hasSeenLoader = sessionStorage.getItem("hasSeenLoader");
 
     if (hasSeenLoader) {
-      navigate("/form");
+      navigate("/landingPage");
     } else {
       const timer = setTimeout(() => {
         sessionStorage.setItem("hasSeenLoader", "true");

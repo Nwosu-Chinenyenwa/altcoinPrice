@@ -42,6 +42,7 @@ nav{
     justify-content: space-between;
     padding: 10px;
     padding-inline: 50px;
+    background-color: black;
 }
 
 nav ul{
