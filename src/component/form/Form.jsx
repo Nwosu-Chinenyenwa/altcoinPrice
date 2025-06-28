@@ -119,8 +119,7 @@ function Form() {
     }
   };
 
-  if (recaptchaRef === false)
-    return <h3> recaptchaRef loading</h3>;
+  if (recaptchaRef === false) return <h3> recaptchaRef loading</h3>;
 
   return (
     <section className="forms">
@@ -172,13 +171,13 @@ function Form() {
                 marginBottom: "10px",
               }}
               ref={recaptchaRef}
-              sitekey="6Ld21XArAAAAAJvK5tmVqIRUY09e4wu1PmFBMS1t"
+              sitekey="6Lfo2XArAAAAACVmvrzVWiyxi28CV5x4wH-Dw6G7"
               onChange={handleRecaptcha}
             />
-            <button type="submit" disabled={loading}>
-              {loading ? <span className="spinner"></span> : "Login"}
-            </button>
 
+            <button type="submit" disabled={loading}>
+              {loading ? <span className="spinner"></span> : "Sign Up"}
+            </button>
             <div className="bottom-text">
               <p className="para" onClick={() => setShowLogin(true)}>
                 Already have an account?{" "}
