@@ -8,6 +8,7 @@ import SaveLastPage from "./component/currentPage/SaveLastPage.jsx"; */
 import LandingPage from "./component/LandingPage/LandingPage.jsx";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Trade from "./component/Trade/Trade.jsx";
 function App() {
   const ref = useRef(null);
   const location = useLocation();
@@ -46,6 +47,7 @@ function App() {
         <Route path="/landingPage" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/trade" element={<Trade />} />
       </Routes>
     </>
   );

@@ -1,0 +1,48 @@
+.modern-footer {
+  width: 100%;
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #f1f1f1;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.modern-footer__content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.modern-footer__content span {
+  color: #4fc3f7;
+  font-weight: 600;
+}
+
+.disclaimer {
+  font-style: italic;
+  color: #cccccc;
+  margin-top: 1rem;
+}
+
+.powered {
+  margin-top: 1.2rem;
+  color: #aaaaaa;
+}
+
+.powered a {
+  color: #4fc3f7;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.powered a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

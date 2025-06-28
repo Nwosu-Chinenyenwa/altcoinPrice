@@ -1,0 +1,12 @@
+.trading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.trading h1{
+  font-size: 50px;
+  font-weight: 900;
+  color: #24355a;
+}

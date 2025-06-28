@@ -8,6 +8,7 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 import { auth } from "../firebase/firebase";
 import { signOut } from "firebase/auth";
 import { Link, Outlet } from "react-router-dom";
+import Footer from "../Footer/Footer";
 import Cookies from "js-cookie";
 
 export default function Home() {
@@ -274,7 +275,7 @@ export default function Home() {
               <p>{index + 1}</p>
               <div className="coin-info">
                 <img src={item.image} alt={item.name} className="coin-img" />
-                <span className="name">
+                <span className="span">
                   {item.name} <small>({item.symbol.toUpperCase()})</small>
                 </span>
               </div>
@@ -330,30 +331,7 @@ export default function Home() {
           ))}
         </div>
       </main>
-
-      <footer className="modern-footer">
-        <div className="modern-footer__content">
-          <p>
-            © {new Date().getFullYear()} <span>AltcoinPrices</span>. All Rights
-            Reserved.
-          </p>
-          <p>Reproduction or distribution without permission is prohibited.</p>
-          <p className="disclaimer">
-            AltcoinPrices provides data for informational purposes only. Always
-            DYOR (Do Your Own Research).
-          </p>
-          <p className="powered">
-            Powered by{" "}
-            <a
-              href="https://www.coingecko.com/en/api"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CoinGecko API
-            </a>
-          </p>
-        </div>
-      </footer>
+      <Footer/>
       <Outlet />
     </>
   );

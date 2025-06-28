@@ -14,7 +14,7 @@ import useRecaptcha from "../form/reCAPTCHA";
 import axios from "axios";
 
 function Form() {
-  const { capchaToken, recaptchaRef, handleRecaptcha } = useRecaptcha();
+  const { capchaToken, recaptchaRef, handleRecaptcha } = useRecaptcha(true);
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -118,6 +118,9 @@ function Form() {
       alert("Please fill in all fields and complete the captcha.");
     }
   };
+
+  if (recaptchaRef === false)
+    return <h3> recaptchaRef loading</h3>;
 
   return (
     <section className="forms">

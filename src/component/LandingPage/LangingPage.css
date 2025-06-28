@@ -113,7 +113,7 @@ gap: 5px;
 
 .landing1 div button{
   width: 25vw;
- height: 8vh;
+ padding-block:15px ;
 border-radius: 200px;
 }
 
@@ -142,6 +142,66 @@ background-color: #24355a;
 .contactLinks  li{
 color: #24355a;
 font-size: 25px;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.name{
+      width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.names{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about h1 span{
+    color: red;
+    margin-right: 10px;
+}
+
+.about h1{
+    font-size: 30px;
+    font-weight: 800;
+    color: #24355a;
+}
+
+.about p{
+    font-size: 15px;
+    color: #4d4d4d;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.about h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: #24355a;
+}
+
+.ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ul li{
+    list-style: none;
+    display: flex;
+}
+ 
+.ul li span{
+  color: red;
 }
 
 ul {
@@ -228,17 +288,17 @@ li:hover::after {
 .example-2 .icon-content a:hover .filled {
   height: 100%;
 }
-.example-2 .icon-content a[data-social="spotify"] .filled,
-.example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
+.example-2 .icon-content a[data-social="whatsapp"] .filled,
+.example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
   background-color: #1db954;
 }
-.example-2 .icon-content a[data-social="pinterest"] .filled,
-.example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
   background-color: #bd081c;
 }
 .example-2 .icon-content a[data-social="dribbble"] .filled,
 .example-2 .icon-content a[data-social="dribbble"] ~ .tooltip {
-  background-color: purple
+  background-color:blue;
 }
 .example-2 .icon-content a[data-social="telegram"] .filled,
 .example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
@@ -249,6 +309,85 @@ li:hover::after {
   background-color: black;
 }
 
+.altcoin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.altcoin img{
+    width: 15vw;
+    height: 20vh;
+    border: 1px solid #0000004e;
+    padding: 20px;
+}
+
+.landingCoin{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.landingCoin h1{
+    text-align: center;
+    color: #24355a;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+.card{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cards{
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 25vw;
+padding: 5px;
+text-align: center;
+justify-content: center;
+border: 1px solid #00000034;
+align-items: center;
+height: 70vh;
+cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+
+.cards:hover{
+border: none;
+box-shadow: 0px 0px 5px 0px #0000003a;
+}
+
+.cards img{
+   width: 10vw;
+}
+
+.cards h1{
+    font-weight: 800;
+    font-size: 25px;
+    color: #24355a;
+}
+
+.cards p{
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.cards h2{
+    color: #00000063;
+}
+
+.responsive-slide{
+    display: none;
+}
 @media (max-width:768px){
     .link{
         display: none;
@@ -313,6 +452,83 @@ gap: 10px;
 
 .landing2 img{
     width: 90vw;
+}
+
+ .contactLinks{
+    display: none;
+}
+
+.altcoin {
+ display: grid;
+ grid-template-columns: repeat(2,9rem);
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.altcoin img {
+    width: 50vw;
+    height: 20vh;
+    border: 1px solid #0000004e;
+    padding: 0px;
+}
+
+.about {
+    display: flex
+;
+flex-direction: column-reverse;
+padding: 10px;
+}
+
+.name
+ {
+    width:auto;
+    display: flex
+;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.about p{
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.about h2{
+    font-size: 15px;
+}
+
+.about h1{
+    font-size: 20px;
+}
+
+.about .ul{
+    gap: 2px;
+}
+
+.about li{
+    font-size: 10px;
+}
+
+.landingCoin {
+display: none;
+}
+
+.responsive-slide{
+    margin-top: 50px;
+    display: block;
+}
+
+.cards{
+    width: auto;
+    height: auto;
+    border: none;
+    box-shadow: none;
+}
+
+.cards h1{
+font-size: 15px;
 }
 }
 
@@ -380,9 +596,64 @@ gap: 10px;
 }
 
 .landing2 img{
-    width: 50vw;
+    width: 70vw;
 }
 
+.contactLinks{
+    margin-top: 50px;
+    align-items: center;
+    gap: 0px;
+}
+
+.altcoin img{
+    padding: 0;
+    height: 10vh;
+}
+
+.about img{
+    width: 40vw;
+}
+
+.name{
+    gap: 5px;
+}
+
+.name p{
+    font-size: 10px;
+}
+
+.name li{
+    font-size: 10px;
+}
+
+.name h2{
+    font-size: 15px;
+}
+
+.name ul{
+    gap: 2px;
+}
+
+.name h1{
+    font-size: 15px;
+}
+
+.cards{
+height: auto;
+}
+
+.cards img{
+    width: 8vw;
+}
+
+.cards h1{
+    font-size: 15px;
+}
+
+.cards p{
+    font-size: 10px;
+    line-height: normal;
+}
 }
 
 @media (min-width:801px) and (max-width:900px){
@@ -451,6 +722,61 @@ gap: 10px;
     width: 50vw;
 }
 
+.contactLinks{
+    margin-top: 50px;
+    align-items: center;
+    gap: 0px;
+}
+
+.altcoin img{
+    padding: 0;
+    height: 10vh;
+}
+
+.about img{
+    width: 40vw;
+}
+
+.name{
+    gap: 5px;
+}
+
+.name p{
+    font-size: 10px;
+}
+
+.name li{
+    font-size: 10px;
+}
+
+.name h2{
+    font-size: 15px;
+}
+
+.name ul{
+    gap: 2px;
+}
+
+.name h1{
+    font-size: 15px;
+}
+
+.cards{
+height: auto;
+}
+
+.cards img{
+    width: 8vw;
+}
+
+.cards h1{
+    font-size: 15px;
+}
+
+.cards p{
+    font-size: 10px;
+    line-height: normal;
+}
 }
 
 @media (min-width:901px) and (max-width:920px){
@@ -519,6 +845,61 @@ gap: 10px;
     width: 50vw;
 }
 
+.contactLinks{
+    margin-top: 50px;
+    align-items: center;
+    gap: 0px;
+}
+
+.altcoin img{
+    padding: 0;
+    height: 10vh;
+}
+
+.about img{
+    width: 40vw;
+}
+
+.name{
+    gap: 5px;
+}
+
+.name p{
+    font-size: 10px;
+}
+
+.name li{
+    font-size: 10px;
+}
+
+.name h2{
+    font-size: 15px;
+}
+
+.name ul{
+    gap: 2px;
+}
+
+.name h1{
+    font-size: 15px;
+}
+
+.cards{
+height: auto;
+}
+
+.cards img{
+    width: 8vw;
+}
+
+.cards h1{
+    font-size: 15px;
+}
+
+.cards p{
+    font-size: 10px;
+    line-height: normal;
+}
 }
 
 
@@ -588,6 +969,61 @@ gap: 10px;
     width: 50vw;
 }
 
+.contactLinks{
+    margin-top: 50px;
+    align-items: center;
+    gap: 0px;
+}
+
+.altcoin img{
+    padding: 0;
+    height: 10vh;
+}
+
+.about img{
+    width: 40vw;
+}
+
+.name{
+    gap: 5px;
+}
+
+.name p{
+    font-size: 13px;
+}
+
+.name li{
+    font-size: 13px;
+}
+
+.name h2{
+    font-size: 20px;
+}
+
+.name ul{
+    gap: 2px;
+}
+
+.name h1{
+    font-size: 20px;
+}
+
+.cards{
+height: auto;
+}
+
+.cards img{
+    width: 10vw;
+}
+
+.cards h1{
+    font-size: 20px;
+}
+
+.cards p{
+    font-size: 13px;
+    line-height: normal;
+}
 }
 
 @media (min-width:1300px) and (max-width:1441px){
@@ -599,6 +1035,16 @@ gap: 10px;
     width: 20vw;
     height: 7vh;
     border-radius: 200px;
+}
+
+
+
+.cards{
+    height: 45vh;
+}
+
+.cards img{
+    width: 8vw;
 }
 }
 
@@ -625,6 +1071,22 @@ gap: 10px;
     height: auto;
     border-radius: 200px;
 }
+
+.landing2 img{
+    width: 30vw;
+}
+
+.contactLinks{
+    margin-top: 50px;
+}
+
+.cards{
+    height: 40vh;
+}
+
+.cards img{
+    width: 8vw;
+}
 }
 
 @media (min-width:1442px) and (max-width:2048px){
@@ -634,7 +1096,7 @@ gap: 10px;
         padding-inline: 100px;
     }
     .landing {
-    height: 40vh;
+    height: 50vh;
 }
 
 .landing1 {
@@ -649,6 +1111,19 @@ gap: 10px;
     width: 20vw;
     height: auto;
     border-radius: 200px;
+}
+
+
+.landing2 img{
+    width: 30vw;
+}
+
+.cards{
+    height: 35vh;
+}
+
+.cards img{
+    width: 6vw;
 }
 }
 
@@ -678,5 +1153,14 @@ gap: 10px;
 
 .landing2 img{
     width: 25vw;
+}
+
+.cards{
+    height: 35vh;
+    width: 20vw
+}
+
+.cards img{
+    width: 6vw;
 }
 }

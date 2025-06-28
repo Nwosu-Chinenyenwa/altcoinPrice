@@ -10,7 +10,6 @@ export default function CookieConsent() {
 
   useEffect(() => {
     const Content = Cookies.get("DisplayCookies");
-    console.log("CookieConsent component rendered", Content);
 
     if (!Content && location.pathname === "/landingPage") {
       setDisplayCookies(true);
