@@ -388,10 +388,46 @@ box-shadow: 0px 0px 5px 0px #0000003a;
 .responsive-slide{
     display: none;
 }
+
+.fixed-nav{
+    display: none;
+}
+
+
 @media (max-width:768px){
     .link{
         display: none;
     }
+
+.fixed-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  display: flex;             
+  justify-content: center;   
+  background-color: #24355ae4;
+  padding: 5px 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1000;              
+}
+
+.fixed-nav li {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.fixed-nav li span:nth-child(1) {
+color:white;
+}
+.fixed-nav li span:nth-child(2) {
+color:#0088cc;
+font-weight: 800;
+}
+
 
     .responsiveHeader{
         filter: brightness(100) invert(0);
@@ -491,7 +527,8 @@ padding: 10px;
 }
 
 .about p{
-    font-size: 10px;
+    font-size: 13px;
+    color: black;
     line-height: 15px;
 }
 
@@ -508,7 +545,7 @@ padding: 10px;
 }
 
 .about li{
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .landingCoin {
@@ -529,6 +566,10 @@ display: none;
 
 .cards h1{
 font-size: 15px;
+}
+
+.cj{
+    display: block;
 }
 }
 

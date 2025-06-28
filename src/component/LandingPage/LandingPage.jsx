@@ -66,13 +66,56 @@ function LandingPage() {
             <div className="ham"></div>
           </div>
 
-          {/* <div className="responsiveHeaderNav">
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Coins</li>
-            </ul>
-          </div> */}
+          <ul class="fixed-nav">
+            <li>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M12.5812 2.68627C12.2335 2.43791 11.7664 2.43791 11.4187 2.68627L1.9187 9.47198L3.08118 11.0994L11.9999 4.7289L20.9187 11.0994L22.0812 9.47198L12.5812 2.68627ZM19.5812 12.6863L12.5812 7.68627C12.2335 7.43791 11.7664 7.43791 11.4187 7.68627L4.4187 12.6863C4.15591 12.874 3.99994 13.177 3.99994 13.5V20C3.99994 20.5523 4.44765 21 4.99994 21H18.9999C19.5522 21 19.9999 20.5523 19.9999 20V13.5C19.9999 13.177 19.844 12.874 19.5812 12.6863Z"></path>
+                </svg>
+              </span>{" "}
+              <span>Home</span>
+            </li>
+            <li>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20ZM12 17L15.3588 13.6412C16.2374 12.7625 16.2374 11.3379 15.3588 10.4592C14.4801 9.58056 13.0555 9.58056 12.1768 10.4592L12 10.636L11.8232 10.4592C10.9445 9.58056 9.51992 9.58056 8.64124 10.4592C7.76256 11.3379 7.76256 12.7625 8.64124 13.6412L12 17Z"></path>
+                </svg>
+              </span>{" "}
+              <span>About</span>
+            </li>
+            <li>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M14.0049 2.00281C18.4232 2.00281 22.0049 5.58453 22.0049 10.0028C22.0049 13.2474 20.0733 16.0409 17.2973 17.296C16.0422 20.0718 13.249 22.0028 10.0049 22.0028C5.5866 22.0028 2.00488 18.4211 2.00488 14.0028C2.00488 10.7587 3.9359 7.96554 6.71122 6.71012C7.96681 3.93438 10.7603 2.00281 14.0049 2.00281ZM11.0049 9.00281H9.00488V10.0028C7.62417 10.0028 6.50488 11.1221 6.50488 12.5028C6.50488 13.8283 7.53642 14.9128 8.84051 14.9975L9.00488 15.0028H11.0049L11.0948 15.0109C11.328 15.0532 11.5049 15.2573 11.5049 15.5028C11.5049 15.7483 11.328 15.9524 11.0948 15.9948L11.0049 16.0028H7.00488V18.0028H9.00488V19.0028H11.0049V18.0028C12.3856 18.0028 13.5049 16.8835 13.5049 15.5028C13.5049 14.1773 12.4733 13.0928 11.1693 13.0081L11.0049 13.0028H9.00488L8.91501 12.9948C8.68176 12.9524 8.50488 12.7483 8.50488 12.5028C8.50488 12.2573 8.68176 12.0532 8.91501 12.0109L9.00488 12.0028H13.0049V10.0028H11.0049V9.00281ZM14.0049 4.00281C12.2214 4.00281 10.6196 4.78097 9.52064 6.01629C9.68133 6.00764 9.84254 6.00281 10.0049 6.00281C14.4232 6.00281 18.0049 9.58453 18.0049 14.0028C18.0049 14.1655 18 14.327 17.9905 14.4873C19.2265 13.3885 20.0049 11.7866 20.0049 10.0028C20.0049 6.6891 17.3186 4.00281 14.0049 4.00281Z"></path>
+                </svg>
+              </span>{" "}
+              <span>Coins</span>
+            </li>
+            <li>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M4 15H6V20H18V4H6V9H4V3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V15ZM10 11V8L15 12L10 16V13H2V11H10Z"></path>
+                </svg>
+              </span>{" "}
+              <span>Login</span>
+            </li>
+          </ul>
         </div>
 
         <section className="landing">
@@ -86,7 +129,7 @@ function LandingPage() {
             </p>
             <div>
               <Link to={"/trade"}>
-              <button>Let's Trade</button>
+                <button>Let's Trade</button>
               </Link>
               <button>View coins</button>
             </div>
@@ -198,7 +241,7 @@ function LandingPage() {
             <img src={main5} alt="" />
           </div>
         </section>
-        
+
         <section>
           <div className="about">
             <img src={main6} alt="" />
@@ -275,105 +318,105 @@ function LandingPage() {
         <section className="landingCoin">
           <h1>TREnding COINS</h1>
           <div>
-          <Swiper
-            spaceBetween={30}
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{delay:1000}}
-            modules={[Pagination, Navigation]}
-          >
-            <SwiperSlide>
-              <div className="card">
-                <div className="cards">
-                  <img src={coin1} alt="" />
-                  <h1>Bitcoin</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid minima porro natus animi quaerat, mollitia
-                    perferendis enim facere? Vitae aliquid dolores rerum unde.
-                    Ullam quaerat fugiat repellat deleniti possimus minus!
-                  </p>
-                  <h2>Price:$3000</h2>
-                </div>
-                <div className="cards">
-                  <img src={coin2} alt="" />
-                  <h1>Bitcoin</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid minima porro natus animi quaerat, mollitia
-                    perferendis enim facere? Vitae aliquid dolores rerum unde.
-                    Ullam quaerat fugiat repellat deleniti possimus minus!
-                  </p>
-                  <h2>Price:$3000</h2>
-                </div>
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 1000 }}
+              modules={[Pagination, Navigation]}
+            >
+              <SwiperSlide>
+                <div className="card">
+                  <div className="cards">
+                    <img src={coin1} alt="" />
+                    <h1>Bitcoin</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid minima porro natus animi quaerat, mollitia
+                      perferendis enim facere? Vitae aliquid dolores rerum unde.
+                      Ullam quaerat fugiat repellat deleniti possimus minus!
+                    </p>
+                    <h2>Price:$3000</h2>
+                  </div>
+                  <div className="cards">
+                    <img src={coin2} alt="" />
+                    <h1>Bitcoin</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid minima porro natus animi quaerat, mollitia
+                      perferendis enim facere? Vitae aliquid dolores rerum unde.
+                      Ullam quaerat fugiat repellat deleniti possimus minus!
+                    </p>
+                    <h2>Price:$3000</h2>
+                  </div>
 
-                <div className="cards">
-                  <img src={coin3} alt="" />
-                  <h1>Bitcoin</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid minima porro natus animi quaerat, mollitia
-                    perferendis enim facere? Vitae aliquid dolores rerum unde.
-                    Ullam quaerat fugiat repellat deleniti possimus minus!
-                  </p>
-                  <h2>Price:$3000</h2>
+                  <div className="cards">
+                    <img src={coin3} alt="" />
+                    <h1>Bitcoin</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid minima porro natus animi quaerat, mollitia
+                      perferendis enim facere? Vitae aliquid dolores rerum unde.
+                      Ullam quaerat fugiat repellat deleniti possimus minus!
+                    </p>
+                    <h2>Price:$3000</h2>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card">
-                <div className="cards">
-                  <img src={coin4} alt="" />
-                  <h1>Bitcoin</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid minima porro natus animi quaerat, mollitia
-                    perferendis enim facere? Vitae aliquid dolores rerum unde.
-                    Ullam quaerat fugiat repellat deleniti possimus minus!
-                  </p>
-                  <h2>Price:$3000</h2>
-                </div>
-                <div className="cards">
-                  <img src={coin1} alt="" />
-                  <h1>Bitcoin</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid minima porro natus animi quaerat, mollitia
-                    perferendis enim facere? Vitae aliquid dolores rerum unde.
-                    Ullam quaerat fugiat repellat deleniti possimus minus!
-                  </p>
-                  <h2>Price:$3000</h2>
-                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="card">
+                  <div className="cards">
+                    <img src={coin4} alt="" />
+                    <h1>Bitcoin</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid minima porro natus animi quaerat, mollitia
+                      perferendis enim facere? Vitae aliquid dolores rerum unde.
+                      Ullam quaerat fugiat repellat deleniti possimus minus!
+                    </p>
+                    <h2>Price:$3000</h2>
+                  </div>
+                  <div className="cards">
+                    <img src={coin1} alt="" />
+                    <h1>Bitcoin</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid minima porro natus animi quaerat, mollitia
+                      perferendis enim facere? Vitae aliquid dolores rerum unde.
+                      Ullam quaerat fugiat repellat deleniti possimus minus!
+                    </p>
+                    <h2>Price:$3000</h2>
+                  </div>
 
-                <div className="cards">
-                  <img src={coin1} alt="" />
-                  <h1>Bitcoin</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid minima porro natus animi quaerat, mollitia
-                    perferendis enim facere? Vitae aliquid dolores rerum unde.
-                    Ullam quaerat fugiat repellat deleniti possimus minus!
-                  </p>
-                  <h2>Price:$3000</h2>
+                  <div className="cards">
+                    <img src={coin1} alt="" />
+                    <h1>Bitcoin</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid minima porro natus animi quaerat, mollitia
+                      perferendis enim facere? Vitae aliquid dolores rerum unde.
+                      Ullam quaerat fugiat repellat deleniti possimus minus!
+                    </p>
+                    <h2>Price:$3000</h2>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+              </SwiperSlide>
+            </Swiper>
           </div>
-        </section> 
+        </section>
 
         <section className="responsive-slide">
-          <Swiper 
-          modules={[Navigation,Pagination,Autoplay]}
-          pagination={{clickable:true}}
-          navigation
-          slidesPerView={1}
-          spaceBetween={20}
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            pagination={{ clickable: true }}
+            navigation
+            slidesPerView={1}
+            spaceBetween={20}
           >
-           <div className="card">
-           <SwiperSlide>
-            <div className="cards">
+            <div className="card">
+              <SwiperSlide>
+                <div className="cards">
                   <img src={coin1} alt="" />
                   <h1>Bitcoin</h1>
                   <p>
@@ -384,9 +427,9 @@ function LandingPage() {
                   </p>
                   <h2>Price:$3000</h2>
                 </div>
-           </SwiperSlide>
-           <SwiperSlide>
-            <div className="cards">
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="cards">
                   <img src={coin1} alt="" />
                   <h1>Bitcoin</h1>
                   <p>
@@ -397,9 +440,9 @@ function LandingPage() {
                   </p>
                   <h2>Price:$3000</h2>
                 </div>
-           </SwiperSlide>
-           <SwiperSlide>
-            <div className="cards">
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="cards">
                   <img src={coin1} alt="" />
                   <h1>Bitcoin</h1>
                   <p>
@@ -410,12 +453,12 @@ function LandingPage() {
                   </p>
                   <h2>Price:$3000</h2>
                 </div>
-           </SwiperSlide>
-           </div>
+              </SwiperSlide>
+            </div>
           </Swiper>
         </section>
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }
