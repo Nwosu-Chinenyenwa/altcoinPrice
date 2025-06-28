@@ -10,7 +10,7 @@ import {
 } from "firebase/auth";
 import "./Form.css";
 import ReCAPTCHA from "react-google-recaptcha";
-import useRecaptcha from "../form/reCAPTCHA";
+import useRecaptcha from "./reCAPTCHA";
 import axios from "axios";
 
 function Form() {
@@ -102,7 +102,7 @@ function Form() {
         alert("ReCAPTCHA validation failed. Please try again.");
         handleRecaptcha("");
         if (recaptchaRef.current) {
-          recaptchaRef.current.reset();
+          recaptchaRef.current?.reset();
         }
         return;
       }
@@ -172,16 +172,11 @@ function Form() {
                 marginBottom: "10px",
               }}
               ref={recaptchaRef}
-              sitekey="6Ld90nArAAAAAIuLozUROtWg36fmY3hzvUhWBPzq"
+              sitekey="6Ld21XArAAAAAJvK5tmVqIRUY09e4wu1PmFBMS1t"
               onChange={handleRecaptcha}
             />
-
-            <button
-              type="submit"
-              disabled={loading && !capchaToken}
-              onClick={submit}
-            >
-              {loading ? <span className="spinner"></span> : "Sign Up"}
+            <button type="submit" disabled={loading}>
+              {loading ? <span className="spinner"></span> : "Login"}
             </button>
 
             <div className="bottom-text">
