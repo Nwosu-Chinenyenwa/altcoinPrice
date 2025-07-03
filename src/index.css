@@ -7,6 +7,10 @@
   font-family: 'Outfit', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 a{
   text-decoration: none;
   color: white;
@@ -40,6 +44,7 @@ body{
                 0 0 60 #2696EB,
                 0 0 100px #2696EB;
                 animation:  colors 5s infinite;
+                z-index: 888888;
 }
 
 @keyframes colors{

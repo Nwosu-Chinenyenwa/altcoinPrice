@@ -1,0 +1,29 @@
+.tion{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.according{
+    justify-content: center;
+    align-items: center;
+    padding-inline: 100px;
+}
+
+.according hr{
+   color: rgba(0, 0, 0, 0.333);
+}
+
+.accord{
+    background-color: transparent;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accord span{
+    cursor: pointer;
+}

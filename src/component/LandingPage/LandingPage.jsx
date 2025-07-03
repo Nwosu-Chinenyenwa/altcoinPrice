@@ -14,8 +14,8 @@ import main4 from "../../assets/undraw_ethereum_5s6b.svg";
 import main5 from "../../assets/undraw_stock-prices_8nuz.svg";
 import main6 from "../../assets/undraw_ether_dnch.svg";
 import Footer from "../Footer/Footer";
+import Spline from "@splinetool/react-spline";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -26,7 +26,7 @@ import "./LangingPage.css";
 import HeroImg from "../../assets/undraw_crypto-portfolio_cat6.svg";
 import { Link, Outlet } from "react-router-dom";
 import { IconSwimming } from "@tabler/icons-react";
-
+import Accordion from "../../ui/ui/Accordion";
 function LandingPage() {
   const removeCookie = () => {
     Cookies.remove("DisplayCookies");
@@ -34,10 +34,20 @@ function LandingPage() {
   };
   return (
     <>
+      <a href="#header">
+        <svg
+          className="top"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M6 7 18 7V9L6 9 6 7ZM12 11 6 17H18L12 11Z"></path>
+        </svg>
+      </a>
       <main className="page">
         <CoinContextProvider />
         {/*  <CookieConsent /> */}
-        <div className="header">
+        <div className="header" id="header">
           <div className="link">
             <img src={Logo} alt="" />
             <div className="trade">
@@ -138,7 +148,7 @@ function LandingPage() {
                 <button>Let's Trade</button>
               </Link>
               <Link to={"/form"}>
-                <button>View coins</button>
+                <button className="nth">View coins</button>
               </Link>
             </div>
           </div>
@@ -464,6 +474,98 @@ function LandingPage() {
               </SwiperSlide>
             </div>
           </Swiper>
+        </section>
+
+        <section className="question">
+          <h1>Frequently Asked Questions</h1>
+          <Accordion />
+        </section>
+
+        <section className="exclusive">
+          <h1>One API for All Crypto Market Data</h1>
+          <div className="shift">
+            <div className="wrote">
+              <div className="bot">
+                <span></span>
+                <span>
+                  <h3>Exclusive</h3>
+                  <div>
+                    <p>Independently sourced & aggregated data</p>
+                    <div className="li">
+                      <li>
+                        Data for over 17,000+ cryptocurrencies such as Bitcoin,
+                        Ethereum tracked across over 1,000+ crypto exchanges
+                        like Binance, Crypto.com, and Kraken
+                      </li>
+                      <li>
+                        More than 9M+ tokens data tracked across 200+ blockchain
+                        networks and 1,000+ decentralised exchanges
+                      </li>
+                      <li>
+                        2,000+ NFT collections tracked across 30+ marketplaces
+                        like Opensea, Looksrare and more!
+                      </li>
+                    </div>
+                  </div>
+                </span>
+              </div>
+              <div className="bot">
+                <span></span>
+                <span>
+                  <h3>Exclusive</h3>
+                  <div>
+                    <p>Independently sourced & aggregated data</p>
+                    <div className="li">
+                      <li>
+                        Data for over 17,000+ cryptocurrencies such as Bitcoin,
+                        Ethereum tracked across over 1,000+ crypto exchanges
+                        like Binance, Crypto.com, and Kraken
+                      </li>
+                      <li>
+                        More than 9M+ tokens data tracked across 200+ blockchain
+                        networks and 1,000+ decentralised exchanges
+                      </li>
+                      <li>
+                        2,000+ NFT collections tracked across 30+ marketplaces
+                        like Opensea, Looksrare and more!
+                      </li>
+                    </div>
+                  </div>
+                </span>
+              </div>
+              <div className="bot">
+                <span></span>
+                <span>
+                  <h3>Exclusive</h3>
+                  <div>
+                    <p>Independently sourced & aggregated data</p>
+                    <div className="li">
+                      <li>
+                        Data for over 17,000+ cryptocurrencies such as Bitcoin,
+                        Ethereum tracked across over 1,000+ crypto exchanges
+                        like Binance, Crypto.com, and Kraken
+                      </li>
+                      <li>
+                        More than 9M+ tokens data tracked across 200+ blockchain
+                        networks and 1,000+ decentralised exchanges
+                      </li>
+                      <li>
+                        2,000+ NFT collections tracked across 30+ marketplaces
+                        like Opensea, Looksrare and more!
+                      </li>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+
+            <div className="style">
+              <Spline
+                className="spline"
+                scene="https://prod.spline.design/vLWuG3tkpCnynESy/scene.splinecode"
+              />
+            </div>
+          </div>
         </section>
       </main>
       <Footer />
