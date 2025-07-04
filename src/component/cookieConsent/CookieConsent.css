@@ -1,8 +1,6 @@
-.card{
+.cave{
     height: 100vh;
    background-color:rgba(0, 0, 0, 0.769);
-    justify-content: center;
-    align-items: center;
     display: flex;
     position: fixed;
   top: 0;
@@ -10,54 +8,21 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 20;
+  z-index: 88888;
 }
 
-.cards{
+.caves{
     position: fixed;
     right: 0;
+    width: 50vw;
     bottom: 0%;
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: black;
-    background-color:white;
+    background-color: #1b2844;
+    color: aliceblue;
 }
 
-.card h2{
-    font-size: 15px;
-    font-weight: 900;
-}
-
-.card p{
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.card-header{
+.display{
     display: flex;
     justify-content: space-between;
-}
-
-.card-header svg{
-    cursor: pointer;
-    width: 2vw;
-}
-
-.card-body{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.card-body div{
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 .accept-button{

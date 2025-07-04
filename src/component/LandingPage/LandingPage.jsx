@@ -28,10 +28,6 @@ import { Link, Outlet } from "react-router-dom";
 import { IconSwimming } from "@tabler/icons-react";
 import Accordion from "../../ui/ui/Accordion";
 function LandingPage() {
-  const removeCookie = () => {
-    Cookies.remove("DisplayCookies");
-    window.location.reload();
-  };
   return (
     <>
       <a href="#header">
@@ -59,9 +55,6 @@ function LandingPage() {
                 </Link>
               </ul>
               <div className="navbtn">
-                <button class="Btn" onClick={removeCookie}>
-                  <div class="text">Reset Cookies</div>
-                </button>
                 <Link to={"/form"}>
                   <button class="Btn">
                     <div class="text">Login</div>
@@ -565,6 +558,10 @@ function LandingPage() {
                 scene="https://prod.spline.design/vLWuG3tkpCnynESy/scene.splinecode"
               />
             </div>
+          </div>
+        </section>
+        <section>
+          <div className="contact-form">
           </div>
         </section>
       </main>

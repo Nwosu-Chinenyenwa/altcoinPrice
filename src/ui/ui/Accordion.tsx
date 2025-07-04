@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import "./According.css"
 
-  const AccordingItem = ({title, content}) => {
+  const AccordingItem = ({title, content}:{title:string, content:string}) => {
   const [view, setview] = useState(false)
-
   return(
+    <>
     <div className='according'>
       <div className='accord' onClick={() => setview(prev => !prev)}>
         <h2>{title}</h2>
@@ -12,10 +12,10 @@ import "./According.css"
       </div>
          {
           view &&
-          <p>{content}</p>
+          <p className='paragraph-content'>{content}</p>
         }
-    <hr/>
     </div>
+    </>
   );
   }
 
@@ -28,7 +28,7 @@ import "./According.css"
     {title:"Is CoinGecko API free?", content:"CoinGecko API offers both free and paid plans. The Demo API plan is accessible to all CoinGecko users at zero cost, with a stable rate limit of 30 calls/min and a monthly cap of 10,000 calls. Paid plans start at $129/mo, offering a higher rate limit of 500 calls/min and a monthly cap of 500,000 calls."},
 
     {title:"Is CoinGecko API free?", content:"CoinGecko API offers both free and paid plans. The Demo API plan is accessible to all CoinGecko users at zero cost, with a stable rate limit of 30 calls/min and a monthly cap of 10,000 calls. Paid plans start at $129/mo, offering a higher rate limit of 500 calls/min and a monthly cap of 500,000 calls."},
-
+    
     {title:"Is CoinGecko API free?", content:"CoinGecko API offers both free and paid plans. The Demo API plan is accessible to all CoinGecko users at zero cost, with a stable rate limit of 30 calls/min and a monthly cap of 10,000 calls. Paid plans start at $129/mo, offering a higher rate limit of 500 calls/min and a monthly cap of 500,000 calls."}
     
   ]

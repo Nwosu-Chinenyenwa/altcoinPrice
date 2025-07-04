@@ -1,29 +1,64 @@
 .tion{
-    padding: 50px;
-    display: flex;
+      display: flex;
     flex-direction: column;
-    gap: 40px;
-}
-
-
-.according{
-    justify-content: center;
-    align-items: center;
+    gap: 30px;
     padding-inline: 100px;
 }
 
-.according hr{
-   color: rgba(0, 0, 0, 0.333);
-}
-
 .accord{
-    background-color: transparent;
-    color: black;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.244);
+}
+
+.accord h2{
+   font-weight: 800;
+   font-size: 15px;
+   color: rgb(73, 71, 71);
+}
+
+.paragraph-content{
+ color: rgba(0, 0, 0, 0.66);
+ font-size: 13px;
+ line-height: 24px;
 }
 
 .accord span{
-    cursor: pointer;
+   font-weight: 800;
+   font-size: 15px;
+   cursor: pointer;
+   color: rgb(73, 71, 71);
+}
+
+
+@media(max-width:768px){
+    .tion{
+      display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-inline: 10px;
+}
+
+.accord{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.244);
+}
+
+.accord h2{
+   font-weight: 700;
+   font-size: 13px;
+   color: rgb(73, 71, 71);
+}
+
+.paragraph-content{
+ font-size: 10px;
+ line-height: 25px;
+ padding: 10px;
+}
+
+.accord span{
+   font-weight: 700;
+   font-size: 10px;
+}
 }
