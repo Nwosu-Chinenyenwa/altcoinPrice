@@ -37,7 +37,7 @@ function LandingPage() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-            >
+        >
           <path d="M6 7 18 7V9L6 9 6 7ZM12 11 6 17H18L12 11Z"></path>
         </svg>
       </a>
@@ -57,22 +57,7 @@ function LandingPage() {
               </ul>
               <div className="navbtn">
                 <Link to={"/form"}>
-                  <button className="const">
-                    <span className="span-mother">
-                      <span>L</span>
-                      <span>o</span>
-                      <span>g</span>
-                      <span>i</span>
-                      <span>n</span>
-                    </span>
-                    <span className="span-mother2">
-                      <span>L</span>
-                      <span>o</span>
-                      <span>g</span>
-                      <span>i</span>
-                      <span>n</span>
-                    </span>
-                  </button>
+                  <button className="yes">Login</button>
                 </Link>
               </div>
             </div>
@@ -339,7 +324,6 @@ function LandingPage() {
             </div>
           </div>
         </section>
-
         <section className="landingCoin">
           <h1>TREnding COINS</h1>
           <div>
@@ -354,76 +338,88 @@ function LandingPage() {
               <SwiperSlide>
                 <div className="card">
                   <div className="cards">
-                    <img src={coin1} alt="" />
+                    <img
+                      src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
+                      alt="Bitcoin"
+                    />
                     <h1>Bitcoin</h1>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aliquid minima porro natus animi quaerat, mollitia
-                      perferendis enim facere? Vitae aliquid dolores rerum unde.
-                      Ullam quaerat fugiat repellat deleniti possimus minus!
+                      Bitcoin is the first and most valuable cryptocurrency,
+                      often called digital gold due to its decentralized and
+                      limited supply.
                     </p>
-                    <h2>Price:$3000</h2>
-                  </div>
-                  <div className="cards">
-                    <img src={coin2} alt="" />
-                    <h1>Bitcoin</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aliquid minima porro natus animi quaerat, mollitia
-                      perferendis enim facere? Vitae aliquid dolores rerum unde.
-                      Ullam quaerat fugiat repellat deleniti possimus minus!
-                    </p>
-                    <h2>Price:$3000</h2>
+                    <h2>Price:$60,300</h2>
                   </div>
 
                   <div className="cards">
-                    <img src={coin3} alt="" />
-                    <h1>Bitcoin</h1>
+                    <img
+                      src="https://assets.coingecko.com/coins/images/4128/large/solana.png"
+                      alt="Solana"
+                    />
+                    <h1>Solana</h1>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aliquid minima porro natus animi quaerat, mollitia
-                      perferendis enim facere? Vitae aliquid dolores rerum unde.
-                      Ullam quaerat fugiat repellat deleniti possimus minus!
+                      Solana is a high-speed blockchain built for scalable apps
+                      and low-cost transactions, powering DeFi and NFTs.
                     </p>
-                    <h2>Price:$3000</h2>
+                    <h2>Price:$142.20</h2>
+                  </div>
+
+                  <div className="cards">
+                    <img
+                      src="https://assets.coingecko.com/coins/images/279/large/ethereum.png"
+                      alt="Ethereum"
+                    />
+                    <h1>Ethereum</h1>
+                    <p>
+                      Ethereum is a smart contract platform that powers
+                      thousands of decentralized applications across DeFi, NFTs,
+                      and more.
+                    </p>
+                    <h2>Price:$3,100</h2>
                   </div>
                 </div>
               </SwiperSlide>
+
               <SwiperSlide>
                 <div className="card">
                   <div className="cards">
-                    <img src={coin4} alt="" />
-                    <h1>Bitcoin</h1>
+                    <img
+                      src="https://assets.coingecko.com/coins/images/29850/large/pepe-token.jpeg"
+                      alt="Pepe"
+                    />
+                    <h1>Pepe</h1>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aliquid minima porro natus animi quaerat, mollitia
-                      perferendis enim facere? Vitae aliquid dolores rerum unde.
-                      Ullam quaerat fugiat repellat deleniti possimus minus!
+                      PEPE is a memecoin that exploded in popularity, driven by
+                      strong community support and meme culture.
                     </p>
-                    <h2>Price:$3000</h2>
-                  </div>
-                  <div className="cards">
-                    <img src={coin1} alt="" />
-                    <h1>Bitcoin</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aliquid minima porro natus animi quaerat, mollitia
-                      perferendis enim facere? Vitae aliquid dolores rerum unde.
-                      Ullam quaerat fugiat repellat deleniti possimus minus!
-                    </p>
-                    <h2>Price:$3000</h2>
+                    <h2>Price:$0.000010</h2>
                   </div>
 
                   <div className="cards">
-                    <img src={coin1} alt="" />
-                    <h1>Bitcoin</h1>
+                    <img
+                      src="https://assets.coingecko.com/coins/images/17980/large/toncoin.png"
+                      alt="Toncoin"
+                    />
+                    <h1>Toncoin</h1>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aliquid minima porro natus animi quaerat, mollitia
-                      perferendis enim facere? Vitae aliquid dolores rerum unde.
-                      Ullam quaerat fugiat repellat deleniti possimus minus!
+                      Toncoin is the native token of The Open Network, a
+                      blockchain originally created by Telegram to power fast,
+                      scalable apps.
                     </p>
-                    <h2>Price:$3000</h2>
+                    <h2>Price:$7.20</h2>
+                  </div>
+
+                  <div className="cards">
+                    <img
+                      src="https://assets.coingecko.com/coins/images/877/large/chainlink-new-logo.png"
+                      alt="Chainlink"
+                    />
+                    <h1>Chainlink</h1>
+                    <p>
+                      Chainlink is a decentralized oracle network that connects
+                      smart contracts with real-world data securely.
+                    </p>
+                    <h2>Price:$13.45</h2>
                   </div>
                 </div>
               </SwiperSlide>
@@ -497,70 +493,69 @@ function LandingPage() {
                 <span>
                   <h3>Exclusive</h3>
                   <div>
-                    <p>Independently sourced & aggregated data</p>
-                    <div className="li">
+                    <p>Built for Altcoin Traders & Crypto Developers</p>
+                    <ul className="li">
                       <li>
-                        Data for over 17,000+ cryptocurrencies such as Bitcoin,
-                        Ethereum tracked across over 1,000+ crypto exchanges
-                        like Binance, Crypto.com, and Kraken
+                        Instant access to live altcoin data — no setup, no API
+                        key, no stress.
                       </li>
                       <li>
-                        More than 9M+ tokens data tracked across 200+ blockchain
-                        networks and 1,000+ decentralised exchanges
+                        Track over 9 million tokens across 200+ blockchain
+                        networks and 1,000+ DEXes.
                       </li>
                       <li>
-                        2,000+ NFT collections tracked across 30+ marketplaces
-                        like Opensea, Looksrare and more!
+                        Supports 2,000+ NFT collections from marketplaces like
+                        OpenSea, Blur, and more.
                       </li>
-                    </div>
+                    </ul>
                   </div>
                 </span>
               </div>
+
               <div className="bot">
                 <span></span>
                 <span>
                   <h3>Exclusive</h3>
                   <div>
-                    <p>Independently sourced & aggregated data</p>
-                    <div className="li">
+                    <p>All-in-One Aggregated Altcoin Dashboard</p>
+                    <ul className="li">
                       <li>
-                        Data for over 17,000+ cryptocurrencies such as Bitcoin,
-                        Ethereum tracked across over 1,000+ crypto exchanges
-                        like Binance, Crypto.com, and Kraken
+                        Monitor real-time prices of 17,000+ cryptocurrencies
+                        including Ethereum, Solana, Avalanche, and more.
                       </li>
                       <li>
-                        More than 9M+ tokens data tracked across 200+ blockchain
-                        networks and 1,000+ decentralised exchanges
+                        Aggregated from 1,000+ exchanges like Binance,
+                        Crypto.com, Kraken, and PancakeSwap.
                       </li>
                       <li>
-                        2,000+ NFT collections tracked across 30+ marketplaces
-                        like Opensea, Looksrare and more!
+                        NFT and DeFi data updates integrated for a complete
+                        market view.
                       </li>
-                    </div>
+                    </ul>
                   </div>
                 </span>
               </div>
+
               <div className="bot">
                 <span></span>
                 <span>
                   <h3>Exclusive</h3>
                   <div>
-                    <p>Independently sourced & aggregated data</p>
-                    <div className="li">
+                    <p>Real-Time Web App Powered by Firebase</p>
+                    <ul className="li">
                       <li>
-                        Data for over 17,000+ cryptocurrencies such as Bitcoin,
-                        Ethereum tracked across over 1,000+ crypto exchanges
-                        like Binance, Crypto.com, and Kraken
+                        Built on top of Firebase & React — fast, secure, and
+                        scalable for real-time crypto dashboards.
                       </li>
                       <li>
-                        More than 9M+ tokens data tracked across 200+ blockchain
-                        networks and 1,000+ decentralised exchanges
+                        No wallet or private key needed — track coins without
+                        logging in.
                       </li>
                       <li>
-                        2,000+ NFT collections tracked across 30+ marketplaces
-                        like Opensea, Looksrare and more!
+                        Save favorites, explore coin detail pages, and view live
+                        charts effortlessly.
                       </li>
-                    </div>
+                    </ul>
                   </div>
                 </span>
               </div>
@@ -576,9 +571,8 @@ function LandingPage() {
         </section>
 
         <section>
-          <Globalcount/>
+          <Globalcount />
         </section>
-
       </main>
       <Footer />
     </>

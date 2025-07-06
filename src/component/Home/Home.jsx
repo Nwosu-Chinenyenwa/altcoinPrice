@@ -13,10 +13,11 @@ import Cookies from "js-cookie";
 
 export default function Home() {
   const [link, setlink] = useState(true);
-  const [use, setuse] = useState(true);
+  const [use, setuse] = useState(false);
   const { allCoins, currency } = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
   const [input, setInput] = useState("");
+  const [have, sethave] = useState(0);
   const { setCurrency } = useContext(CoinContext);
   const [user, setUser] = useState(null);
 
@@ -50,7 +51,7 @@ export default function Home() {
   }, []);
 
   /*  currency */
-  const currencyHandler = async (e) => {
+  /*   const currencyHandler = async (e) => {
     switch (e.target.value) {
       case "usd":
         setCurrency({ name: "USD", symbol: "$" });
@@ -85,7 +86,7 @@ export default function Home() {
       default:
         setCurrency({ name: "USD", symbol: "$" });
     }
-  };
+  }; */
 
   /*   const navigate = useNavigate(); */
 
@@ -147,6 +148,7 @@ export default function Home() {
 
         <nav>
           <img className="lo" src={logo} alt="" />
+          <img className="ol" src={logo} alt="" />
           <ul>
             <form class="form">
               <label for="search">
@@ -187,30 +189,35 @@ export default function Home() {
               </label>
             </form>
 
-            <button class="button" onClick={handleLogout}>
-              <div class="button-box">
-                <span class="button-elem">
-                  <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
-                  </svg>
-                </span>
-                <span class="button-elem">
-                  <svg viewBox="0 0 46 40">
-                    <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
-                  </svg>
-                </span>
-              </div>
+            <button onClick={handleLogout} class="animated-button">
+              <span>Logout</span>
+              <span></span>
             </button>
 
-            <div onClick={() => setuse((prev) => !prev)} className="profile">
+            <svg
+              className="port"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M4 18H6V20H18V4H6V6H4V3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V18ZM6 11H13V13H6V16L1 12L6 8V11Z"></path>
+            </svg>
+            <div className="profile">
+              <span
+                className="dot"
+                onClick={() => (user?.email ? sethave(1) : sethave(0))}
+              >
+                {have}
+              </span>
               <svg
+                className="prove"
+                onClick={() => setuse((prev) => !prev)}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
-                <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+                <path d="M20 7.23792L12.0718 14.338L4 7.21594V19H14V21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V13H20V7.23792ZM19.501 5H4.51146L12.0619 11.662L19.501 5ZM17.05 19.5485C17.0172 19.3706 17 19.1873 17 19C17 18.8127 17.0172 18.6294 17.05 18.4515L16.0359 17.866L17.0359 16.134L18.0505 16.7197C18.3278 16.4824 18.6489 16.2948 19 16.1707V15H21V16.1707C21.3511 16.2948 21.6722 16.4824 21.9495 16.7197L22.9641 16.134L23.9641 17.866L22.95 18.4515C22.9828 18.6294 23 18.8127 23 19C23 19.1873 22.9828 19.3706 22.95 19.5485L23.9641 20.134L22.9641 21.866L21.9495 21.2803C21.6722 21.5176 21.3511 21.7052 21 21.8293V23H19V21.8293C18.6489 21.7052 18.3278 21.5176 18.0505 21.2803L17.0359 21.866L16.0359 20.134L17.05 19.5485ZM20 20C20.5523 20 21 19.5523 21 19C21 18.4477 20.5523 18 20 18C19.4477 18 19 18.4477 19 19C19 19.5523 19.4477 20 20 20Z"></path>
               </svg>
-              <img src={profile} alt="" />
             </div>
           </ul>
         </nav>
@@ -255,6 +262,18 @@ export default function Home() {
             </div>
           </div>
         )}
+
+        <section className="responsive-input">
+          <div className="group">
+            <svg className="icon" aria-hidden="true" viewBox="0 0 24 24">
+              <g>
+                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+              </g>
+            </svg>
+            <input onChange={inputHandler} placeholder="Search" type="search" className="input" />
+          </div>
+        </section>
+        
       </header>
       <main className="market-main">
         <div className="coins">
@@ -269,7 +288,6 @@ export default function Home() {
             <p>Supply</p>
             <p>7D Chart</p>
           </div>
-
           {displayCoin.slice(0, 100).map((item, index) => (
             <div className="table-layout coin-row" key={item.id}>
               <p>{index + 1}</p>
@@ -331,7 +349,7 @@ export default function Home() {
           ))}
         </div>
       </main>
-      <Footer/>
+      <Footer />
       <Outlet />
     </>
   );
