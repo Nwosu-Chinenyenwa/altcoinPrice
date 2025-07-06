@@ -435,47 +435,96 @@ function LandingPage() {
             slidesPerView={1}
             spaceBetween={20}
           >
-            <div className="card">
-              <SwiperSlide>
-                <div className="cards">
-                  <img src={coin1} alt="" />
-                  <h1>Bitcoin</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid minima porro natus animi quaerat, mollitia
-                    perferendis enim facere? Vitae aliquid dolores rerum unde.
-                    Ullam quaerat fugiat repellat deleniti possimus minus!
-                  </p>
-                  <h2>Price:$3000</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="cards">
-                  <img src={coin1} alt="" />
-                  <h1>Bitcoin</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid minima porro natus animi quaerat, mollitia
-                    perferendis enim facere? Vitae aliquid dolores rerum unde.
-                    Ullam quaerat fugiat repellat deleniti possimus minus!
-                  </p>
-                  <h2>Price:$3000</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="cards">
-                  <img src={coin1} alt="" />
-                  <h1>Bitcoin</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid minima porro natus animi quaerat, mollitia
-                    perferendis enim facere? Vitae aliquid dolores rerum unde.
-                    Ullam quaerat fugiat repellat deleniti possimus minus!
-                  </p>
-                  <h2>Price:$3000</h2>
-                </div>
-              </SwiperSlide>
-            </div>
+            <SwiperSlide>
+              <div className="cards">
+                <img
+                  src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
+                  alt="Bitcoin"
+                />
+                <h1>Bitcoin</h1>
+                <p>
+                  Bitcoin is the first and most valuable cryptocurrency, often
+                  called digital gold due to its decentralized and limited
+                  supply.
+                </p>
+                <h2>Price: $60,300</h2>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="cards">
+                <img
+                  src="https://assets.coingecko.com/coins/images/4128/large/solana.png"
+                  alt="Solana"
+                />
+                <h1>Solana</h1>
+                <p>
+                  Solana is a high-speed blockchain built for scalable apps and
+                  low-cost transactions, powering DeFi and NFTs.
+                </p>
+                <h2>Price: $142.20</h2>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="cards">
+                <img
+                  src="https://assets.coingecko.com/coins/images/279/large/ethereum.png"
+                  alt="Ethereum"
+                />
+                <h1>Ethereum</h1>
+                <p>
+                  Ethereum is a smart contract platform that powers thousands of
+                  decentralized applications across DeFi, NFTs, and more.
+                </p>
+                <h2>Price: $3,100</h2>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="cards">
+                <img
+                  src="https://assets.coingecko.com/coins/images/29850/large/pepe-token.jpeg"
+                  alt="Pepe"
+                />
+                <h1>Pepe</h1>
+                <p>
+                  PEPE is a memecoin that exploded in popularity, driven by
+                  strong community support and meme culture.
+                </p>
+                <h2>Price: $0.000010</h2>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="cards">
+                <img
+                  src="https://assets.coingecko.com/coins/images/17980/large/toncoin.png"
+                  alt="Toncoin"
+                />
+                <h1>Toncoin</h1>
+                <p>
+                  Toncoin is the native token of The Open Network, a blockchain
+                  originally created by Telegram to power fast, scalable apps.
+                </p>
+                <h2>Price: $7.20</h2>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="cards">
+                <img
+                  src="https://assets.coingecko.com/coins/images/877/large/chainlink-new-logo.png"
+                  alt="Chainlink"
+                />
+                <h1>Chainlink</h1>
+                <p>
+                  Chainlink is a decentralized oracle network that connects
+                  smart contracts with real-world data securely.
+                </p>
+                <h2>Price: $13.45</h2>
+              </div>
+            </SwiperSlide>
           </Swiper>
         </section>
 
