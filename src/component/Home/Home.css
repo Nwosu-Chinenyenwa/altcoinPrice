@@ -36,6 +36,10 @@ font-weight: 900;
       position: relative;
 }
 
+.ol{
+  display: none;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -790,18 +794,6 @@ input:-webkit-autofill:active {
   display: none;
 }
 
-/* ========= Tablet Screens ========= */
-@media (min-width:769px) and (max-width: 1024px) {
-  .table-layout {
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr 1.2fr 1.5fr 1.5fr;
-  }
-
-  .table-layout > .sparkline {
-    display: none;
-  }
-}
-
-/* ========= Mobile Screens ========= */
 @media (max-width: 768px) {
   nav {
     display: flex
@@ -951,3 +943,240 @@ padding: 20px;
   }
 }
 
+@media (min-width:789px) and (max-width:900px){
+nav{
+  padding-inline: 10px;
+}
+.lo{
+      filter: brightness(0) invert(1);
+      height: 1.5vh;
+      width: 20vw;
+}
+
+.form{
+  height: 3.5vh;
+}
+
+.table-layout {
+    display: grid
+;
+    grid-template-columns: 0.1fr 1.5fr 0.5fr 1fr 1fr 0.8fr 1.5fr 2fr 1.5fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.market-main {
+    padding: 0rem;
+    padding-top: 2rem;
+    font-size: 10px;
+}
+
+.sparkline {
+    width: 10px;
+    height: 4px;
+    scale: 10;
+    display: block;
+}
+}
+
+@media (min-width:901px) and (max-width:916px){
+  nav{
+  padding-inline: 10px;
+}
+.lo{
+      filter: brightness(0) invert(1);
+      height: 1.3vh;
+      width: 18vw;
+}
+
+.form{
+  height: 2.5vh;
+}
+
+.table-layout {
+    display: grid
+;
+    grid-template-columns: 0.1fr 1.5fr 0.5fr 1fr 1fr 0.8fr 1.5fr 2fr 1.5fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.market-main {
+    padding: 0rem;
+    padding-top: 2rem;
+    font-size: 10px;
+}
+
+.sparkline {
+    width: 10px;
+    height: 4px;
+    scale: 10;
+    display: block;
+}
+}
+
+@media (min-width:917px) and (max-width:1024px){
+    nav{
+  padding-inline: 10px;
+}
+.lo{
+      filter: brightness(0) invert(1);
+      height: 1.5vh;
+      width: 20vw;
+}
+
+.form{
+  height: 3vh;
+}
+
+.table-layout {
+    display: grid
+;
+    grid-template-columns: 0.1fr 1.5fr 0.5fr 1fr 1fr 0.8fr 1.5fr 2fr 1.5fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.market-main {
+    padding: 0rem;
+    padding-top: 2rem;
+    font-size: 10px;
+}
+
+.sparkline {
+    width: 10px;
+    height: 4px;
+    scale: 10;
+    display: block;
+}
+}
+@media (min-width:1442px) and (max-width:1920px){
+    .link{
+        height: auto;
+        padding: 10px;
+        padding-inline: 100px;
+    }
+    .landing {
+    height: 50vh;
+}
+
+.landing1 {
+    display: flex
+;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+}
+
+.landing1 div button {
+    width: 20vw;
+    height: auto;
+    border-radius: 200px;
+}
+
+.landing2 img{
+    width: 30vw;
+}
+
+.contactLinks{
+    margin-top: 50px;
+}
+
+.cards{
+    height: 35vh;
+}
+
+.cards img{
+    width: 8vw;
+}
+}
+
+@media (min-width:1442px) and (max-width:2048px){
+    .link{
+        height: auto;
+        padding: 10px;
+        padding-inline: 100px;
+    }
+    .landing {
+    height: 50vh;
+}
+
+.landing1 {
+    display: flex
+;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+}
+
+.landing1 div button {
+    width: 20vw;
+    height: auto;
+    border-radius: 200px;
+}
+
+
+.landing2 img{
+    width: 30vw;
+}
+
+.cards{
+    height: 35vh;
+}
+
+.cards img{
+    width: 6vw;
+}
+}
+
+
+@media (min-width:1301px) and (max-width:1441px){
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+ bottom: 2px;
+ left: -6px;
+}
+}
+
+@media (min-width:1442px) and (max-width:1920px){
+
+  .animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+ bottom: 2px;
+ left: -3.5px;
+}
+}

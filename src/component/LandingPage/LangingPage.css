@@ -343,6 +343,10 @@
   }
 }
 
+.yes{
+    width: 7.5vw;
+}
+
 .top{
 position: absolute;
 right: 0;
@@ -1186,6 +1190,32 @@ height: auto;
     font-size: 10px;
     line-height: normal;
 }
+
+.shift {
+    display: flex
+;
+flex-direction: column-reverse;
+}
+
+.style {
+    display: none;
+}
+
+.wrote {
+    gap: 10px;
+}
+
+.bot {
+    gap: 5px;
+}
+
+.bot span:nth-child(1) {
+    background-color: #24355a;
+    display: block;
+    width: 0.3vw;
+    border-radius: 10px;
+    height: 10vh;
+}
 }
 
 @media (min-width:801px) and (max-width:900px){
@@ -1309,6 +1339,32 @@ height: auto;
     font-size: 10px;
     line-height: normal;
 }
+
+.shift {
+    display: flex
+;
+flex-direction: column-reverse;
+}
+
+.style {
+    display: none;
+}
+
+.wrote {
+    gap: 10px;
+}
+
+.bot {
+    gap: 5px;
+}
+
+.bot span:nth-child(1) {
+    background-color: #24355a;
+    display: block;
+    width: 0.3vw;
+    border-radius: 10px;
+    height: 10vh;
+}
 }
 
 @media (min-width:901px) and (max-width:920px){
@@ -1431,6 +1487,32 @@ height: auto;
 .cards p{
     font-size: 10px;
     line-height: normal;
+}
+
+.shift {
+    display: flex
+;
+flex-direction: column-reverse;
+}
+
+.style {
+    display: none;
+}
+
+.wrote {
+    gap: 10px;
+}
+
+.bot {
+    gap: 5px;
+}
+
+.bot span:nth-child(1) {
+    background-color: #24355a;
+    display: block;
+    width: 0.3vw;
+    border-radius: 10px;
+    height: 8vh;
 }
 }
 
@@ -1556,27 +1638,31 @@ height: auto;
     font-size: 13px;
     line-height: normal;
 }
+
+.shift {
+    display: flex
+;
 }
 
-@media (min-width:1300px) and (max-width:1441px){
-    .landing {
-    height: 60vh;
+.style {
+    display: block;
+    width: 50vw;
 }
 
-.landing1 div button {
-    width: 20vw;
-    height: 7vh;
-    border-radius: 200px;
+.wrote {
+    gap: 10px;
 }
 
-
-
-.cards{
-    height: 45vh;
+.bot {
+    gap: 5px;
 }
 
-.cards img{
-    width: 8vw;
+.bot span:nth-child(1) {
+    background-color: #24355a;
+    display: block;
+    width: 0.3vw;
+    border-radius: 10px;
+    height: 11vh;
 }
 }
 
@@ -1613,7 +1699,7 @@ height: auto;
 }
 
 .cards{
-    height: 40vh;
+    height: 35vh;
 }
 
 .cards img{
@@ -1659,6 +1745,149 @@ height: auto;
 }
 }
 
+
+@media (min-width:1301px) and (max-width:1441px){
+    .landing {
+    height: 60vh;
+}
+
+.landing1 div button {
+    width: 20vw;
+    height: 7vh;
+    border-radius: 200px;
+}
+
+
+
+.cards{
+    height: 45vh;
+}
+
+.cards img{
+    width: 8vw;
+}
+
+.shift{
+    justify-content: space-between;
+}
+
+.bot{
+gap: 8px;
+}
+
+.bot span:nth-child(1) {
+    width: 0.2vw;
+    height: 19vh;
+}
+}
+
+@media (min-width:1442px) and (max-width:1920px){
+    .link{
+        height: auto;
+        padding: 10px;
+        padding-inline: 100px;
+    }
+    .landing {
+    height: 50vh;
+}
+
+.landing1 {
+    display: flex
+;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+}
+
+.landing1 div button {
+    width: 20vw;
+    height: auto;
+    border-radius: 200px;
+}
+
+.landing2 img{
+    width: 30vw;
+}
+
+.contactLinks{
+    margin-top: 50px;
+}
+
+.cards{
+    height: 40vh;
+    width: 18vw;
+}
+
+.cards img{
+    width: 8vw;
+}
+
+.shift{
+    justify-content: space-between;
+}
+
+.bot{
+gap: 8px;
+}
+
+.bot span:nth-child(1) {
+    width: 0.2vw;
+    height: 16vh;
+}
+}
+
+@media (min-width:1442px) and (max-width:2048px){
+    .link{
+        height: auto;
+        padding: 10px;
+        padding-inline: 100px;
+    }
+    .landing {
+    height: 50vh;
+}
+
+.landing1 {
+    display: flex
+;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+}
+
+.landing1 div button {
+    width: 20vw;
+    height: auto;
+    border-radius: 200px;
+}
+
+
+.landing2 img{
+    width: 30vw;
+}
+
+.cards{
+    height: 35vh;
+    width: 16vw;
+}
+
+.cards img{
+    width: 5vw;
+}
+
+.shift{
+    justify-content: space-between;
+}
+
+.bot{
+gap: 8px;
+}
+
+.bot span:nth-child(1) {
+    width: 0.2vw;
+    height: 13vh;
+}
+}
+
 @media (min-width:2049px) and (max-width:2496px){
     .link{
         height: auto;
@@ -1688,11 +1917,24 @@ height: auto;
 }
 
 .cards{
-    height: 35vh;
-    width: 20vw
+    height: 23vh;
+    width: 15vw
 }
 
 .cards img{
-    width: 6vw;
+    width: 4vw;
+}
+
+.shift{
+    justify-content: space-between;
+}
+
+.bot{
+gap: 8px;
+}
+
+.bot span:nth-child(1) {
+    width: 0.1vw;
+    height: 9vh;
 }
 }
