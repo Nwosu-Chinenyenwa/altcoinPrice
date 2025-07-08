@@ -189,10 +189,12 @@ export default function Home() {
               </label>
             </form>
 
-            <button onClick={handleLogout} class="animated-button">
-              <span>Logout</span>
-              <span></span>
-            </button>
+            <Link to={"/landingPage"}>
+              <button onClick={handleLogout} class="animated-button">
+                <span>Logout</span>
+                <span></span>
+              </button>
+            </Link>
 
             <svg
               className="port"
@@ -221,7 +223,7 @@ export default function Home() {
             </div>
           </ul>
         </nav>
-        
+
         {use && (
           <div class="card-client">
             <div class="user-picture">

@@ -49,8 +49,12 @@ function LandingPage() {
             <img src={Logo} alt="" />
             <div className="trade">
               <ul>
-                <li>Home</li>
-                <li>About</li>
+                <Link to={"/home"}>
+                  <li>Home</li>
+                </Link>
+                <a href="#about">
+                  <li>About</li>
+                </a>
                 <Link to={"/home"}>
                   <li>Coins</li>
                 </Link>
@@ -252,7 +256,7 @@ function LandingPage() {
           </div>
         </section>
 
-        <section>
+        <section id="about">
           <div className="about">
             <img src={main6} alt="" />
             <div className="name">
